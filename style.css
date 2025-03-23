@@ -106,9 +106,7 @@ button[class="spin"] {
   position: relative;
   background-color: #bfbfbf;
   border-radius: 50%;
-  box-shadow:
-  inset -.6rem -0.8rem 1rem rgb(0, 0, 0),
-  .8rem .6rem .7rem rgba(0, 0, 0, 0.571);
+  box-shadow: .8rem .6rem .7rem rgba(0, 0, 0, 0.571);
 }
 .spinner::before{
    content: '';
