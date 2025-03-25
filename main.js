@@ -76,7 +76,6 @@ function updateSpinner() {
 function generateConicGradient(colors) {
   const partitions = colors.length;
   const angleStep = 360 / partitions;
-
   let gradientStops = colors
     .map((color, index) => {
       let start = index * angleStep;
@@ -96,11 +95,13 @@ spinBtn.addEventListener("click", () => {
   console.log(angle);
   spinUlEl.style.animation = "none";
   spinUlEl.offsetHeight; // reflow
+  const audio = new Audio("bike-loop.mp3");
+  audio.play()
 
   document.documentElement.style.setProperty(
     "--angle",
-    `${angle + 360 * 12}deg`
+    `${angle + 360 * 15}deg`
   );
-  spinUlEl.style.animation = `rotate 3s cubic-bezier(.32,.47,.07,.99) forwards`;
+  spinUlEl.style.animation = `rotate 4s cubic-bezier(.32,.47,.07,.99) forwards`;
   spinner.style.pointerEvents = "none";
 });
